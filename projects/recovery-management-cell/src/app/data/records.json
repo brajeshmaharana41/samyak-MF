@@ -1,0 +1,12 @@
+[
+  { "id": "RMC-001", "caseId": "REC/2026/301", "bankName": "PMC Bank", "outstanding": 452000000, "recovered": 118000000, "status": "Partially Recovered" },
+  { "id": "RMC-002", "caseId": "REC/2026/302", "bankName": "Rupee Co-operative Bank", "outstanding": 87500000, "recovered": 0, "status": "Open" },
+  { "id": "RMC-003", "caseId": "REC/2026/303", "bankName": "Kapol Co-operative Bank", "outstanding": 0, "recovered": 31200000, "status": "Fully Recovered" },
+  { "id": "RMC-004", "caseId": "REC/2026/304", "bankName": "Madgaum Urban Co-operative Bank", "outstanding": 26400000, "recovered": 9800000, "status": "Partially Recovered" },
+  { "id": "RMC-005", "caseId": "REC/2026/305", "bankName": "Independence Co-operative Bank", "outstanding": 14300000, "recovered": 0, "status": "Open" },
+  { "id": "RMC-006", "caseId": "REC/2026/306", "bankName": "Adarsh Co-operative Bank", "outstanding": 5600000, "recovered": 1200000, "status": "Written Off" },
+  { "id": "RMC-007", "caseId": "REC/2026/307", "bankName": "Sri Guru Raghavendra Sahakara Bank", "outstanding": 198000000, "recovered": 64500000, "status": "Partially Recovered" },
+  { "id": "RMC-008", "caseId": "REC/2026/308", "bankName": "Mantha Urban Co-operative Bank", "outstanding": 9100000, "recovered": 0, "status": "Open" },
+  { "id": "RMC-009", "caseId": "REC/2026/309", "bankName": "Deccan Urban Co-operative Bank", "outstanding": 0, "recovered": 17750000, "status": "Fully Recovered" },
+  { "id": "RMC-010", "caseId": "REC/2026/310", "bankName": "Shushruti Souharda Sahakara Bank", "outstanding": 42800000, "recovered": 5000000, "status": "Partially Recovered" }
+]

@@ -1,0 +1,12 @@
+[
+  { "id": "CSD-001", "claimId": "CLM/2026/5501", "depositor": "Ramesh Kulkarni", "amount": 500000, "bankName": "Rupee Co-operative Bank", "stage": "Approved" },
+  { "id": "CSD-002", "claimId": "CLM/2026/5502", "depositor": "Sunita Deshmukh", "amount": 325000, "bankName": "Rupee Co-operative Bank", "stage": "Paid" },
+  { "id": "CSD-003", "claimId": "CLM/2026/5503", "depositor": "Mohammed Aslam", "amount": 500000, "bankName": "PMC Bank", "stage": "Verification" },
+  { "id": "CSD-004", "claimId": "CLM/2026/5504", "depositor": "Lakshmi Narayanan", "amount": 148000, "bankName": "Kapol Co-operative Bank", "stage": "Claim Received" },
+  { "id": "CSD-005", "claimId": "CLM/2026/5505", "depositor": "Harpreet Kaur", "amount": 420000, "bankName": "PMC Bank", "stage": "Approved" },
+  { "id": "CSD-006", "claimId": "CLM/2026/5506", "depositor": "Anil Chaudhary", "amount": 87500, "bankName": "Madgaum Urban Co-operative Bank", "stage": "Rejected" },
+  { "id": "CSD-007", "claimId": "CLM/2026/5507", "depositor": "Fatima Shaikh", "amount": 500000, "bankName": "Kapol Co-operative Bank", "stage": "Verification" },
+  { "id": "CSD-008", "claimId": "CLM/2026/5508", "depositor": "Gopal Krishnan", "amount": 265000, "bankName": "Madgaum Urban Co-operative Bank", "stage": "Paid" },
+  { "id": "CSD-009", "claimId": "CLM/2026/5509", "depositor": "Pooja Agarwal", "amount": 192000, "bankName": "Rupee Co-operative Bank", "stage": "Claim Received" },
+  { "id": "CSD-010", "claimId": "CLM/2026/5510", "depositor": "Sanjay Mishra", "amount": 500000, "bankName": "PMC Bank", "stage": "Approved" }
+]

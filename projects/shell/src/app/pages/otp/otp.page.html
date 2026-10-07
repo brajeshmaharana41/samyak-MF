@@ -1,0 +1,35 @@
+<main class="auth-wrapper">
+  <section class="auth-card">
+    <div class="brand">
+      <i class="pi pi-shield"></i>
+      <div>
+        <h1>Verify OTP</h1>
+        <span>Step 2 of 2</span>
+      </div>
+    </div>
+
+    <p class="sub">Enter the 6-digit code sent to your registered mobile number.</p>
+
+    <form (ngSubmit)="verify()" novalidate>
+      <div class="otp-row">
+        <p-inputotp [(ngModel)]="otp" name="otp" [length]="6" [integerOnly]="true" [autofocus]="true" />
+      </div>
+
+      @if (error()) {
+        <p-message severity="error" [text]="error()!" styleClass="form-msg" />
+      }
+
+      <p-button type="submit" label="Verify" icon="pi pi-check" styleClass="full" />
+    </form>
+
+    <div class="links">
+      <button type="button" (click)="backToLogin()"><i class="pi pi-arrow-left"></i> Back to login</button>
+      <button type="button" (click)="resend()">Resend OTP</button>
+    </div>
+
+    <div class="hint">
+      <i class="pi pi-info-circle"></i>
+      Demo OTP: <strong>{{ demoOtp }}</strong>
+    </div>
+  </section>
+</main>

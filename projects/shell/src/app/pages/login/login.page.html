@@ -1,0 +1,46 @@
+<main class="auth-wrapper">
+  <section class="auth-card">
+    <div class="brand">
+      <i class="pi pi-building-columns"></i>
+      <div>
+        <h1>Samyak</h1>
+        <span>Banking back-office</span>
+      </div>
+    </div>
+
+    <h2>Sign in</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <label for="userId">User ID</label>
+      <input id="userId" pInputText formControlName="userId" autocomplete="username" [class.ng-invalid]="showError('userId')" />
+      @if (showError('userId')) {
+        <small class="field-error">User ID is required.</small>
+      }
+
+      <label for="password">Password</label>
+      <p-password
+        inputId="password"
+        formControlName="password"
+        [feedback]="false"
+        [toggleMask]="true"
+        styleClass="full"
+        inputStyleClass="full"
+        autocomplete="current-password"
+      />
+      @if (showError('password')) {
+        <small class="field-error">Password is required.</small>
+      }
+
+      @if (error()) {
+        <p-message severity="error" [text]="error()!" styleClass="form-msg" />
+      }
+
+      <p-button type="submit" label="Sign in" icon="pi pi-sign-in" styleClass="full" />
+    </form>
+
+    <div class="hint">
+      <i class="pi pi-info-circle"></i>
+      Demo login: <strong>{{ demo.userId }}</strong> / <strong>{{ demo.password }}</strong>
+    </div>
+  </section>
+</main>

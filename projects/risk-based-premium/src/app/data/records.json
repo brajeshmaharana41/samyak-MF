@@ -1,0 +1,13 @@
+[
+  { "id": "RBP-001", "bankName": "State Bank of India", "riskScore": 88, "grade": "A", "premiumRate": 10, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-002", "bankName": "HDFC Bank", "riskScore": 91, "grade": "A", "premiumRate": 10, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-003", "bankName": "Yes Bank", "riskScore": 64, "grade": "C", "premiumRate": 13, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-004", "bankName": "Saraswat Co-operative Bank", "riskScore": 72, "grade": "B", "premiumRate": 12, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-005", "bankName": "Punjab & Sind Bank", "riskScore": 69, "grade": "B", "premiumRate": 12, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-006", "bankName": "Abhyudaya Co-operative Bank", "riskScore": 41, "grade": "D", "premiumRate": 15, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-007", "bankName": "Federal Bank", "riskScore": 83, "grade": "A", "premiumRate": 10, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-008", "bankName": "Ujjivan Small Finance Bank", "riskScore": 58, "grade": "C", "premiumRate": 13, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-009", "bankName": "Karur Vysya Bank", "riskScore": 77, "grade": "B", "premiumRate": 12, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-010", "bankName": "Cosmos Co-operative Bank", "riskScore": 66, "grade": "B", "premiumRate": 12, "effectiveFrom": "2026-04-01" },
+  { "id": "RBP-011", "bankName": "Nainital Bank", "riskScore": 47, "grade": "D", "premiumRate": 15, "effectiveFrom": "2026-04-01" }
+]

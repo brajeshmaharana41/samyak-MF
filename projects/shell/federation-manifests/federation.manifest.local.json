@@ -1,0 +1,8 @@
+{
+  "brc": "http://localhost:4200/remotes/brc/remoteEntry.json",
+  "iod": "http://localhost:4200/remotes/iod/remoteEntry.json",
+  "csd": "http://localhost:4200/remotes/csd/remoteEntry.json",
+  "crc": "http://localhost:4200/remotes/crc/remoteEntry.json",
+  "rmc": "http://localhost:4200/remotes/rmc/remoteEntry.json",
+  "rbp": "http://localhost:4200/remotes/rbp/remoteEntry.json"
+}

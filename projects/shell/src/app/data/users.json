@@ -1,0 +1,13 @@
+[
+  { "id": "U001", "name": "Ananya Sharma", "role": "Administrator", "department": "IT", "status": "Active" },
+  { "id": "U002", "name": "Rahul Verma", "role": "Officer", "department": "Bank Registration Cell", "status": "Active" },
+  { "id": "U003", "name": "Priya Nair", "role": "Manager", "department": "Claim Settlement Department", "status": "Active" },
+  { "id": "U004", "name": "Vikram Singh", "role": "Officer", "department": "Recovery Management Cell", "status": "Disabled" },
+  { "id": "U005", "name": "Meera Iyer", "role": "Analyst", "department": "Risk Based Premium", "status": "Active" },
+  { "id": "U006", "name": "Arjun Reddy", "role": "Officer", "department": "Complaint Redressal Cell", "status": "Active" },
+  { "id": "U007", "name": "Kavita Joshi", "role": "Manager", "department": "Insurance Operation Department", "status": "Active" },
+  { "id": "U008", "name": "Suresh Patil", "role": "Clerk", "department": "Bank Registration Cell", "status": "Pending" },
+  { "id": "U009", "name": "Deepa Menon", "role": "Auditor", "department": "Claim Settlement Department", "status": "Active" },
+  { "id": "U010", "name": "Imran Khan", "role": "Officer", "department": "Insurance Operation Department", "status": "Disabled" },
+  { "id": "U011", "name": "Neha Gupta", "role": "Analyst", "department": "Risk Based Premium", "status": "Active" }
+]

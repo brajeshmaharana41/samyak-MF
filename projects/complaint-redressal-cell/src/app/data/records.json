@@ -1,0 +1,12 @@
+[
+  { "id": "CRC-001", "ticketNo": "TKT-26-0412", "complainant": "Vivek Saxena", "category": "Claim delay", "priority": "High", "raisedOn": "2026-03-04", "assignedTo": "Priya Nair", "state": "Open" },
+  { "id": "CRC-002", "ticketNo": "TKT-26-0413", "complainant": "Rupee Co-operative Bank", "category": "Premium dispute", "priority": "Medium", "raisedOn": "2026-03-11", "assignedTo": "", "state": "Open" },
+  { "id": "CRC-003", "ticketNo": "TKT-26-0414", "complainant": "Shalini Rao", "category": "Incorrect claim amount", "priority": "High", "raisedOn": "2026-03-19", "assignedTo": "Deepa Menon", "state": "Open" },
+  { "id": "CRC-004", "ticketNo": "TKT-26-0415", "complainant": "Kiran Patel", "category": "KYC rejection", "priority": "Low", "raisedOn": "2026-04-02", "assignedTo": "", "state": "Open" },
+  { "id": "CRC-005", "ticketNo": "TKT-26-0416", "complainant": "Kapol Co-operative Bank", "category": "Registration query", "priority": "Low", "raisedOn": "2026-04-15", "assignedTo": "Rahul Verma", "state": "Resolved" },
+  { "id": "CRC-006", "ticketNo": "TKT-26-0417", "complainant": "Abdul Rehman", "category": "Claim delay", "priority": "Critical", "raisedOn": "2026-04-28", "assignedTo": "", "state": "Open" },
+  { "id": "CRC-007", "ticketNo": "TKT-26-0418", "complainant": "Nirmala Devi", "category": "Nominee update", "priority": "Medium", "raisedOn": "2026-05-06", "assignedTo": "Arjun Reddy", "state": "Open" },
+  { "id": "CRC-008", "ticketNo": "TKT-26-0419", "complainant": "Thomas Mathew", "category": "Portal access", "priority": "Low", "raisedOn": "2026-05-21", "assignedTo": "", "state": "Open" },
+  { "id": "CRC-009", "ticketNo": "TKT-26-0420", "complainant": "Bhavna Joshi", "category": "Incorrect claim amount", "priority": "High", "raisedOn": "2026-06-09", "assignedTo": "Priya Nair", "state": "Open" },
+  { "id": "CRC-010", "ticketNo": "TKT-26-0421", "complainant": "Madgaum Urban Co-operative Bank", "category": "Premium dispute", "priority": "Medium", "raisedOn": "2026-06-23", "assignedTo": "", "state": "Open" }
+]

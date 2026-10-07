@@ -1,0 +1,13 @@
+[
+  { "id": "BRC-001", "bankName": "State Bank of India", "regNo": "DICGC/REG/2026/0141", "state": "Maharashtra", "status": "Approved", "submittedOn": "2026-01-12" },
+  { "id": "BRC-002", "bankName": "Punjab National Bank", "regNo": "DICGC/REG/2026/0142", "state": "Delhi", "status": "Pending", "submittedOn": "2026-02-03" },
+  { "id": "BRC-003", "bankName": "Saraswat Co-operative Bank", "regNo": "DICGC/REG/2026/0143", "state": "Maharashtra", "status": "Under Review", "submittedOn": "2026-02-18" },
+  { "id": "BRC-004", "bankName": "Karnataka Bank", "regNo": "DICGC/REG/2026/0144", "state": "Karnataka", "status": "Approved", "submittedOn": "2026-03-01" },
+  { "id": "BRC-005", "bankName": "Federal Bank", "regNo": "DICGC/REG/2026/0145", "state": "Kerala", "status": "Pending", "submittedOn": "2026-03-09" },
+  { "id": "BRC-006", "bankName": "Cosmos Co-operative Bank", "regNo": "DICGC/REG/2026/0146", "state": "Maharashtra", "status": "Rejected", "submittedOn": "2026-03-22" },
+  { "id": "BRC-007", "bankName": "Bandhan Bank", "regNo": "DICGC/REG/2026/0147", "state": "West Bengal", "status": "Under Review", "submittedOn": "2026-04-05" },
+  { "id": "BRC-008", "bankName": "Tamilnad Mercantile Bank", "regNo": "DICGC/REG/2026/0148", "state": "Tamil Nadu", "status": "Approved", "submittedOn": "2026-04-17" },
+  { "id": "BRC-009", "bankName": "Gujarat State Co-operative Bank", "regNo": "DICGC/REG/2026/0149", "state": "Gujarat", "status": "Pending", "submittedOn": "2026-05-02" },
+  { "id": "BRC-010", "bankName": "AU Small Finance Bank", "regNo": "DICGC/REG/2026/0150", "state": "Rajasthan", "status": "Pending", "submittedOn": "2026-05-20" },
+  { "id": "BRC-011", "bankName": "Jana Small Finance Bank", "regNo": "DICGC/REG/2026/0151", "state": "Karnataka", "status": "Under Review", "submittedOn": "2026-06-08" }
+]

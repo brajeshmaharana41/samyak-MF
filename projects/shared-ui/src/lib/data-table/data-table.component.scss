@@ -1,0 +1,32 @@
+:host {
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.table-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.count {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.actions-col {
+  width: 5rem;
+  text-align: center;
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}

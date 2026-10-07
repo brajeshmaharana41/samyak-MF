@@ -1,0 +1,12 @@
+[
+  { "id": "IOD-001", "policyNo": "DIP/2026/10021", "bankName": "State Bank of India", "premium": 18500000, "period": "Apr 2026 - Sep 2026", "status": "Active" },
+  { "id": "IOD-002", "policyNo": "DIP/2026/10022", "bankName": "Bank of Baroda", "premium": 9200000, "period": "Apr 2026 - Sep 2026", "status": "Active" },
+  { "id": "IOD-003", "policyNo": "DIP/2026/10023", "bankName": "Saraswat Co-operative Bank", "premium": 1450000, "period": "Apr 2026 - Sep 2026", "status": "Renewal Due" },
+  { "id": "IOD-004", "policyNo": "DIP/2026/10024", "bankName": "HDFC Bank", "premium": 12750000, "period": "Apr 2026 - Sep 2026", "status": "Active" },
+  { "id": "IOD-005", "policyNo": "DIP/2026/10025", "bankName": "Abhyudaya Co-operative Bank", "premium": 620000, "period": "Oct 2025 - Mar 2026", "status": "Lapsed" },
+  { "id": "IOD-006", "policyNo": "DIP/2026/10026", "bankName": "Canara Bank", "premium": 8800000, "period": "Apr 2026 - Sep 2026", "status": "Pending" },
+  { "id": "IOD-007", "policyNo": "DIP/2026/10027", "bankName": "ICICI Bank", "premium": 11300000, "period": "Apr 2026 - Sep 2026", "status": "Active" },
+  { "id": "IOD-008", "policyNo": "DIP/2026/10028", "bankName": "Equitas Small Finance Bank", "premium": 980000, "period": "Apr 2026 - Sep 2026", "status": "Renewal Due" },
+  { "id": "IOD-009", "policyNo": "DIP/2026/10029", "bankName": "Union Bank of India", "premium": 7600000, "period": "Apr 2026 - Sep 2026", "status": "Pending" },
+  { "id": "IOD-010", "policyNo": "DIP/2026/10030", "bankName": "South Indian Bank", "premium": 2100000, "period": "Apr 2026 - Sep 2026", "status": "Active" }
+]

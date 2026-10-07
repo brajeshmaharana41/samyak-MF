@@ -1,0 +1,44 @@
+{
+  "/remotes/brc": {
+    "target": "http://localhost:4201",
+    "pathRewrite": {
+      "^/remotes/brc": ""
+    },
+    "changeOrigin": true
+  },
+  "/remotes/iod": {
+    "target": "http://localhost:4202",
+    "pathRewrite": {
+      "^/remotes/iod": ""
+    },
+    "changeOrigin": true
+  },
+  "/remotes/csd": {
+    "target": "http://localhost:4203",
+    "pathRewrite": {
+      "^/remotes/csd": ""
+    },
+    "changeOrigin": true
+  },
+  "/remotes/crc": {
+    "target": "http://localhost:4204",
+    "pathRewrite": {
+      "^/remotes/crc": ""
+    },
+    "changeOrigin": true
+  },
+  "/remotes/rmc": {
+    "target": "http://localhost:4205",
+    "pathRewrite": {
+      "^/remotes/rmc": ""
+    },
+    "changeOrigin": true
+  },
+  "/remotes/rbp": {
+    "target": "http://localhost:4206",
+    "pathRewrite": {
+      "^/remotes/rbp": ""
+    },
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "brc": "https://samyak.example.in/remotes/brc/remoteEntry.json",
+  "iod": "https://samyak.example.in/remotes/iod/remoteEntry.json",
+  "csd": "https://samyak.example.in/remotes/csd/remoteEntry.json",
+  "crc": "https://samyak.example.in/remotes/crc/remoteEntry.json",
+  "rmc": "https://samyak.example.in/remotes/rmc/remoteEntry.json",
+  "rbp": "https://samyak.example.in/remotes/rbp/remoteEntry.json"
+}

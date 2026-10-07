@@ -1,0 +1,83 @@
+<p-table
+  #dt
+  [value]="data()"
+  [columns]="columns()"
+  [dataKey]="dataKey()"
+  [paginator]="true"
+  [rows]="pageSize()"
+  [rowsPerPageOptions]="[5, 10, 20]"
+  [globalFilterFields]="globalFilterFields()"
+  [showCurrentPageReport]="true"
+  currentPageReportTemplate="{first}-{last} of {totalRecords}"
+  [tableStyle]="{ 'min-width': '50rem' }"
+  stripedRows
+>
+  <!-- Search box (filters across every column) -->
+  <ng-template #caption>
+    <div class="table-caption">
+      <p-iconfield iconPosition="left">
+        <p-inputicon styleClass="pi pi-search" />
+        <input
+          pInputText
+          type="text"
+          placeholder="Search..."
+          (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+        />
+      </p-iconfield>
+      <span class="count">{{ data().length }} records</span>
+    </div>
+  </ng-template>
+
+  <ng-template #header let-cols>
+    <tr>
+      @for (col of cols; track col.field) {
+        @if (col.sortable) {
+          <th [pSortableColumn]="col.field">
+            {{ col.header }} <p-sortIcon [field]="col.field" />
+          </th>
+        } @else {
+          <th>{{ col.header }}</th>
+        }
+      }
+      @if (actions().length) {
+        <th class="actions-col">Actions</th>
+      }
+    </tr>
+  </ng-template>
+
+  <ng-template #body let-row let-cols="columns">
+    <tr>
+      @for (col of cols; track col.field) {
+        <td>
+          @switch (col.type) {
+            @case ('date') { {{ row[col.field] | date: 'dd MMM yyyy' }} }
+            @case ('currency') { {{ row[col.field] | currencyInr }} }
+            @case ('status') { <samyak-status-badge [status]="row[col.field]" /> }
+            @default { {{ row[col.field] }} }
+          }
+        </td>
+      }
+      @if (actions().length) {
+        <td class="actions-col">
+          <p-button
+            icon="pi pi-ellipsis-v"
+            [rounded]="true"
+            [text]="true"
+            severity="secondary"
+            ariaLabel="Row actions"
+            (onClick)="openRowMenu($event, row)"
+          />
+        </td>
+      }
+    </tr>
+  </ng-template>
+
+  <ng-template #emptymessage>
+    <tr>
+      <td [attr.colspan]="columns().length + 1" class="empty">No records found.</td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<!-- One shared popup menu; its items are set when a row's button is clicked -->
+<p-menu #rowMenu [popup]="true" appendTo="body" />

@@ -1,0 +1,68 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@samyak/shared-ui": ["./projects/shared-ui/src/public-api.ts"],
+      "@samyak/shared-services": ["./projects/shared-services/src/public-api.ts"]
+    },
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve"
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/shell/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/shell/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared-ui/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared-services/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared-services/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/bank-registration-cell/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/insurance-operation-department/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/claim-settlement-department/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/complaint-redressal-cell/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/recovery-management-cell/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/risk-based-premium/tsconfig.app.json"
+    }
+  ]
+}
