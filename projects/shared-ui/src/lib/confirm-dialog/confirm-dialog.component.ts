@@ -22,21 +22,8 @@ export interface ConfirmDialogData {
 @Component({
   selector: 'samyak-confirm-dialog',
   imports: [ButtonModule],
-  template: `
-    <p class="message">{{ data.message }}</p>
-    <div class="buttons">
-      <p-button [label]="data.cancelLabel ?? 'Cancel'" severity="secondary" [text]="true" (onClick)="close(false)" />
-      <p-button
-        [label]="data.confirmLabel ?? 'Confirm'"
-        [severity]="data.danger ? 'danger' : 'primary'"
-        (onClick)="close(true)"
-      />
-    </div>
-  `,
-  styles: `
-    .message { margin: 0 0 1.5rem; line-height: 1.5; }
-    .buttons { display: flex; justify-content: flex-end; gap: 0.5rem; }
-  `,
+  templateUrl: './confirm-dialog.component.html',
+  styleUrl: './confirm-dialog.component.scss',
 })
 export class ConfirmDialogComponent {
   private readonly ref = inject(DynamicDialogRef);

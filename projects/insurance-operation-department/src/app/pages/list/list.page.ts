@@ -9,9 +9,9 @@ import {
   TableActionEvent,
   openConfirmDialog,
 } from '@samyak/shared-ui';
-import { COLUMNS, InsurancePolicy, MODULE_INFO } from '../data/records';
-import { RecordsStore } from '../data/records.store';
-import { UpdateStatusDialogComponent } from '../dialogs/update-status-dialog.component';
+import { COLUMNS, InsurancePolicy, MODULE_INFO } from '../../data/records';
+import { RecordsStore } from '../../data/records.store';
+import { UpdateStatusDialogComponent } from '../../dialogs/update-status-dialog/update-status-dialog.component';
 
 /**
  * IOD list page: the SHARED table with IOD's own columns, data and actions.
@@ -24,10 +24,8 @@ import { UpdateStatusDialogComponent } from '../dialogs/update-status-dialog.com
   imports: [PageHeaderComponent, DataTableComponent],
   // Provide DialogService here so dialogs opened from this remote page work.
   providers: [DialogService],
-  template: `
-    <samyak-page-header [title]="info.listTitle" subtitle="Deposit insurance policies and premiums" />
-    <samyak-data-table [columns]="columns" [data]="store.all()" [actions]="actions" (actionClick)="onAction($event)" />
-  `,
+  templateUrl: './list.page.html',
+  styleUrl: './list.page.scss',
 })
 export class ListPage {
   private readonly dialogs = inject(DialogService);

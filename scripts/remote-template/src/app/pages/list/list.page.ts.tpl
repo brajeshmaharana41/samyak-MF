@@ -9,9 +9,9 @@ import {
   TableActionEvent,
   openConfirmDialog,
 } from '@samyak/shared-ui';
-import { COLUMNS, MODULE_INFO, ModuleRecord } from '../data/records';
-import { RecordsStore } from '../data/records.store';
-import { EditRecordDialogComponent } from '../dialogs/edit-record-dialog.component';
+import { COLUMNS, MODULE_INFO, ModuleRecord } from '../../data/records';
+import { RecordsStore } from '../../data/records.store';
+import { EditRecordDialogComponent } from '../../dialogs/edit-record-dialog/edit-record-dialog.component';
 
 /**
  * List page: the SHARED table with this module's own columns, data and actions.
@@ -26,10 +26,8 @@ import { EditRecordDialogComponent } from '../dialogs/edit-record-dialog.compone
   imports: [PageHeaderComponent, DataTableComponent],
   // Provide DialogService here so dialogs opened from this remote page work.
   providers: [DialogService],
-  template: `
-    <samyak-page-header [title]="info.listTitle" [subtitle]="info.title" />
-    <samyak-data-table [columns]="columns" [data]="store.all()" [actions]="actions" (actionClick)="onAction($event)" />
-  `,
+  templateUrl: './list.page.html',
+  styleUrl: './list.page.scss',
 })
 export class ListPage {
   private readonly dialogs = inject(DialogService);

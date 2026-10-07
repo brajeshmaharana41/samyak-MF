@@ -3,8 +3,8 @@ import { ButtonModule } from 'primeng/button';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 import type { PDFDocumentLoadingTask } from 'pdfjs-dist';
-import { BankRegistration } from '../data/records';
-import { buildCertificatePdf } from './certificate-pdf';
+import { BankRegistration } from '../../data/records';
+import { buildCertificatePdf } from '../certificate-pdf';
 
 /**
  * BRC-only feature that uses a BRC-only npm library: pdfjs-dist (Mozilla PDF.js).
@@ -24,30 +24,8 @@ import { buildCertificatePdf } from './certificate-pdf';
 @Component({
   selector: 'brc-preview-certificate-dialog',
   imports: [ButtonModule, ProgressSpinnerModule],
-  template: `
-    @if (loading()) {
-      <div class="center"><p-progress-spinner strokeWidth="4" ariaLabel="Loading PDF" /></div>
-    }
-    @if (error()) {
-      <p class="error">{{ error() }}</p>
-    }
-    <div class="viewer" [hidden]="loading() || !!error()">
-      <canvas #canvas></canvas>
-    </div>
-    <div class="buttons">
-      <span class="info">Rendered with PDF.js ({{ pages() }} page) · loaded only by BRC</span>
-      <p-button label="Download" icon="pi pi-download" severity="secondary" [outlined]="true" (onClick)="download()" [disabled]="loading()" />
-      <p-button label="Close" (onClick)="ref.close()" />
-    </div>
-  `,
-  styles: `
-    .center { display: grid; place-items: center; height: 24rem; }
-    .viewer { max-height: 65vh; overflow: auto; background: #e5e7eb; padding: 1rem; border-radius: 8px; text-align: center; }
-    canvas { max-width: 100%; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,.2); background: #fff; }
-    .buttons { display: flex; justify-content: flex-end; align-items: center; gap: .5rem; margin-top: 1rem; flex-wrap: wrap; }
-    .info { margin-right: auto; color: #6b7280; font-size: .85rem; }
-    .error { color: #dc2626; }
-  `,
+  templateUrl: './preview-certificate-dialog.component.html',
+  styleUrl: './preview-certificate-dialog.component.scss',
 })
 export class PreviewCertificateDialogComponent implements OnInit, OnDestroy {
   protected readonly ref = inject(DynamicDialogRef);

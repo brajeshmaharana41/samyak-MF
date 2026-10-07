@@ -10,9 +10,9 @@ import {
   TableActionEvent,
   openConfirmDialog,
 } from '@samyak/shared-ui';
-import { COLUMNS, MODULE_INFO, RecoveryCase } from '../data/records';
-import { RecordsStore } from '../data/records.store';
-import { RecordPaymentDialogComponent } from '../dialogs/record-payment-dialog.component';
+import { COLUMNS, MODULE_INFO, RecoveryCase } from '../../data/records';
+import { RecordsStore } from '../../data/records.store';
+import { RecordPaymentDialogComponent } from '../../dialogs/record-payment-dialog/record-payment-dialog.component';
 
 /**
  * RMC list page: the SHARED table with RMC's own columns, data and actions.
@@ -25,10 +25,8 @@ import { RecordPaymentDialogComponent } from '../dialogs/record-payment-dialog.c
   imports: [PageHeaderComponent, DataTableComponent],
   // Provide DialogService here so dialogs opened from this remote page work.
   providers: [DialogService],
-  template: `
-    <samyak-page-header [title]="info.listTitle" subtitle="Dues recoverable from liquidated banks" />
-    <samyak-data-table [columns]="columns" [data]="store.all()" [actions]="actions" (actionClick)="onAction($event)" />
-  `,
+  templateUrl: './list.page.html',
+  styleUrl: './list.page.scss',
 })
 export class ListPage {
   private readonly dialogs = inject(DialogService);

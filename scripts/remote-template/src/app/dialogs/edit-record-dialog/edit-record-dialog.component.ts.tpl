@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { ModuleRecord } from '../data/records';
+import { ModuleRecord } from '../../data/records';
 
 /**
  * Dialog owned by THIS module (module dialogs never go in the shared library).
@@ -12,25 +12,8 @@ import { ModuleRecord } from '../data/records';
 @Component({
   selector: '__KEY__-edit-record-dialog',
   imports: [ReactiveFormsModule, ButtonModule, InputTextModule],
-  template: `
-    <form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
-      <label for="name">Name</label>
-      <input id="name" pInputText formControlName="name" />
-
-      <label for="category">Category</label>
-      <input id="category" pInputText formControlName="category" />
-
-      <div class="buttons">
-        <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
-        <p-button type="submit" label="Save" icon="pi pi-check" [disabled]="form.invalid" />
-      </div>
-    </form>
-  `,
-  styles: `
-    .dialog-form { display: flex; flex-direction: column; gap: .4rem; }
-    label { font-weight: 500; margin-top: .5rem; }
-    .buttons { display: flex; justify-content: flex-end; gap: .5rem; margin-top: 1.25rem; }
-  `,
+  templateUrl: './edit-record-dialog.component.html',
+  styleUrl: './edit-record-dialog.component.scss',
 })
 export class EditRecordDialogComponent {
   protected readonly ref = inject(DynamicDialogRef);

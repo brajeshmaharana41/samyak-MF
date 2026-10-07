@@ -1,0 +1,19 @@
+@if (tile().enabled) {
+  <a class="tile" [routerLink]="tile().route">
+    <ng-container *ngTemplateOutlet="content" />
+    <span class="cta">Open module <i class="pi pi-arrow-right"></i></span>
+  </a>
+} @else {
+  <div class="tile disabled" aria-disabled="true">
+    <span class="soon">Coming soon</span>
+    <i [class]="tile().icon + ' icon'"></i>
+    <h3>{{ tile().title }}</h3>
+    <p>{{ tile().description }}</p>
+  </div>
+}
+
+<ng-template #content>
+  <i [class]="tile().icon + ' icon'"></i>
+  <h3>{{ tile().title }}</h3>
+  <p>{{ tile().description }}</p>
+</ng-template>

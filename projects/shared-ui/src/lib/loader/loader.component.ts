@@ -9,23 +9,8 @@ import { LoaderService } from '@samyak/shared-services';
 @Component({
   selector: 'samyak-loader',
   imports: [ProgressSpinnerModule],
-  template: `
-    @if (loader.isLoading()) {
-      <div class="overlay" role="status" aria-label="Loading">
-        <p-progress-spinner strokeWidth="4" ariaLabel="Loading" />
-      </div>
-    }
-  `,
-  styles: `
-    .overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 5000;
-      display: grid;
-      place-items: center;
-      background: rgba(255, 255, 255, 0.6);
-    }
-  `,
+  templateUrl: './loader.component.html',
+  styleUrl: './loader.component.scss',
 })
 export class LoaderComponent {
   protected readonly loader = inject(LoaderService);

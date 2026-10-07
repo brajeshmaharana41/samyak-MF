@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
+  <label for="bankName">Bank name</label>
+  <input id="bankName" pInputText formControlName="bankName" />
+
+  <label for="regNo">Registration no.</label>
+  <input id="regNo" pInputText formControlName="regNo" />
+
+  <label for="state">State</label>
+  <p-select inputId="state" formControlName="state" [options]="states" [filter]="true" appendTo="body" />
+
+  <div class="buttons">
+    <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
+    <p-button type="submit" label="Save" icon="pi pi-check" [disabled]="form.invalid" />
+  </div>
+</form>

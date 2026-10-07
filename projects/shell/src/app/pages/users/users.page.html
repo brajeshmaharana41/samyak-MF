@@ -1,0 +1,4 @@
+<div class="page">
+  <samyak-page-header title="Users" subtitle="Shell-owned page using the shared table" backLink="/home" />
+  <samyak-data-table [columns]="columns" [data]="users()" [actions]="actions" (actionClick)="onAction($event)" />
+</div>

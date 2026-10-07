@@ -12,11 +12,13 @@
  *   1. ng g application <folder-name>                     (standalone, SCSS, no SSR)
  *   2. ng g @angular-architects/native-federation:init    (as a remote on <port>)
  *   3. Copies scripts/remote-template/** into the new project (dashboard, list, detail,
- *      own dialog, sample JSON data, layout showing the shared AuthService user)
- *   4. angular.json: CORS header on the dev server, live-reload notifications off (see below)
+ *      own dialog, sample JSON data, layout showing the shared AuthService user). Every
+ *      component is a folder with its .ts, .html, .scss and .spec.ts.
+ *   4. angular.json: CORS header on the dev server, live-reload notifications off (see below),
+ *      and a `test` target so `ng test <folder-name>` runs the specs
  *   5. Shell: adds "<key>" to every federation manifest, a tile to modules.config.ts, and a
  *      dev proxy entry (/remotes/<key> -> localhost:<port>) to projects/shell/proxy.conf.json
- *   6. package.json: start:<key>, build:<key>, dev:<key> (shell + this module), and refreshes start:all / build:all
+ *   6. package.json: start:<key>, build:<key>, dev:<key> (shell + this module), and refreshes start:all / build:all / test:all
  *
  * After running it, replace the sample data/columns/actions in
  * projects/<folder-name>/src/app/data/records.ts, records.json and pages/list.page.ts.
@@ -81,7 +83,7 @@ const readJson = (file) => JSON.parse(fs.readFileSync(path.join(root, file), 'ut
 const writeJson = (file, data) => fs.writeFileSync(path.join(root, file), JSON.stringify(data, null, 2) + '\n');
 
 // ---------- 2. Generate the Angular app and make it a Native Federation remote ----------
-run(`npx ng g application ${name} --prefix ${key} --style=scss --routing --ssr=false --skip-tests --skip-install`);
+run(`npx ng g application ${name} --prefix ${key} --style=scss --routing --ssr=false --skip-install`);
 run(`npx ng g @angular-architects/native-federation:init --project ${name} --port ${port} --type remote`);
 
 // ---------- 3. Copy the template ----------
@@ -115,6 +117,12 @@ serveOriginal.options = { ...serveOriginal.options, port, headers: { 'Access-Con
 // because all remotes are proxied through the shell's single origin (localhost:4200), six of them
 // would use up the browser's 6-connections-per-origin limit and freeze the page.
 angular.projects[name].architect.serve.options = { ...angular.projects[name].architect.serve.options, buildNotifications: { enable: false } };
+// Unit tests (`ng test <name>`): the `build` target is the Native Federation builder, so the
+// test runner has to point at the plain Angular `esbuild` target instead.
+angular.projects[name].architect.test = {
+  builder: '@angular/build:unit-test',
+  options: { tsConfig: `projects/${name}/tsconfig.spec.json`, buildTarget: `${name}:esbuild:development` },
+};
 writeJson('angular.json', angular);
 
 // ---------- 5. Shell wiring: manifests + tile ----------
@@ -174,6 +182,9 @@ const all = ['shell', ...remoteKeys];
 pkg.scripts['start:all'] =
   `concurrently -k -n ${all.join(',')} -c auto ` + all.map((k) => `"npm:start:${k}"`).join(' ');
 pkg.scripts['build:all'] = all.map((k) => `npm run build:${k}`).join(' && ');
+if (pkg.scripts['test:all'] && !pkg.scripts['test:all'].includes(`ng test ${name} `)) {
+  pkg.scripts['test:all'] += ` && ng test ${name} --watch=false`;
+}
 pkg.scripts = sortScripts(pkg.scripts, remoteKeys);
 writeJson('package.json', pkg);
 

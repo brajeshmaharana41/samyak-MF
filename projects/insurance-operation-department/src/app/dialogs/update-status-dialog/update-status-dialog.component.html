@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
+  <p class="info">{{ policy.bankName }} &middot; {{ policy.policyNo }}</p>
+
+  <label for="status">New status</label>
+  <p-select inputId="status" formControlName="status" [options]="statuses" appendTo="body" />
+
+  <label for="remarks">Remarks</label>
+  <textarea id="remarks" pTextarea rows="3" formControlName="remarks" placeholder="Reason for the change"></textarea>
+
+  <div class="buttons">
+    <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
+    <p-button type="submit" label="Update" icon="pi pi-check" [disabled]="form.invalid" />
+  </div>
+</form>

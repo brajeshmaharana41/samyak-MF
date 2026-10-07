@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelectModule } from 'primeng/select';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { BankRegistration } from '../data/records';
+import { BankRegistration } from '../../data/records';
 
 /**
  * BRC-owned dialog. It belongs to this module only, so it lives here,
@@ -13,28 +13,8 @@ import { BankRegistration } from '../data/records';
 @Component({
   selector: 'brc-edit-registration-dialog',
   imports: [ReactiveFormsModule, ButtonModule, InputTextModule, SelectModule],
-  template: `
-    <form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
-      <label for="bankName">Bank name</label>
-      <input id="bankName" pInputText formControlName="bankName" />
-
-      <label for="regNo">Registration no.</label>
-      <input id="regNo" pInputText formControlName="regNo" />
-
-      <label for="state">State</label>
-      <p-select inputId="state" formControlName="state" [options]="states" [filter]="true" appendTo="body" />
-
-      <div class="buttons">
-        <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
-        <p-button type="submit" label="Save" icon="pi pi-check" [disabled]="form.invalid" />
-      </div>
-    </form>
-  `,
-  styles: `
-    .dialog-form { display: flex; flex-direction: column; gap: .4rem; }
-    label { font-weight: 500; margin-top: .5rem; }
-    .buttons { display: flex; justify-content: flex-end; gap: .5rem; margin-top: 1.25rem; }
-  `,
+  templateUrl: './edit-registration-dialog.component.html',
+  styleUrl: './edit-registration-dialog.component.scss',
 })
 export class EditRegistrationDialogComponent {
   protected readonly ref = inject(DynamicDialogRef);

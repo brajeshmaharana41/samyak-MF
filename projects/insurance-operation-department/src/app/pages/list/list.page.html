@@ -1,0 +1,2 @@
+<samyak-page-header [title]="info.listTitle" subtitle="Deposit insurance policies and premiums" />
+<samyak-data-table [columns]="columns" [data]="store.all()" [actions]="actions" (actionClick)="onAction($event)" />

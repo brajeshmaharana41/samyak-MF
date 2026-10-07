@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
+  <label for="name">Name</label>
+  <input id="name" pInputText formControlName="name" />
+
+  <label for="role">Role</label>
+  <p-select inputId="role" formControlName="role" [options]="roles" appendTo="body" />
+
+  <label for="department">Department</label>
+  <input id="department" pInputText formControlName="department" />
+
+  <div class="buttons">
+    <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
+    <p-button type="submit" label="Save" icon="pi pi-check" [disabled]="form.invalid" />
+  </div>
+</form>

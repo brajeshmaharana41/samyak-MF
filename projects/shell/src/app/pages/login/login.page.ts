@@ -12,7 +12,7 @@ import { AuthService, DEMO_CREDENTIALS, LoaderService } from '@samyak/shared-ser
   selector: 'app-login-page',
   imports: [ReactiveFormsModule, ButtonModule, InputTextModule, PasswordModule, MessageModule],
   templateUrl: './login.page.html',
-  styleUrl: '../auth-card.scss',
+  styleUrl: './login.page.scss',
 })
 export class LoginPage {
   private readonly auth = inject(AuthService);

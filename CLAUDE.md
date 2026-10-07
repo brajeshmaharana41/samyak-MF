@@ -32,6 +32,13 @@ Rules for anyone (human or AI) changing this repo. Read before editing.
 - Remotes have `buildNotifications.enable: false` in angular.json. With all remotes proxied through one origin, their
   never-ending SSE live-reload streams would use up the browser's 6-connections-per-origin limit and freeze the page.
 
+## Component files
+- Every component lives in its own folder with four files: `x.component.ts`, `.html`, `.scss`, `.spec.ts`
+  (pages use `x.page.*`). No inline `template:` / `styles:`; use `templateUrl` / `styleUrl`.
+- The scaffold in `scripts/remote-template/` follows the same layout, specs included.
+- Run specs per project: `npx ng test <project> --watch=false` (every app and lib has a `test` target;
+  apps point it at their plain `esbuild` target because `build` is the Native Federation builder).
+
 ## Table and actions pattern
 - Every list page uses `DataTableComponent` (`<samyak-data-table>`) from `@samyak/shared-ui`.
 - Inputs: `columns: TableColumn[]`, `data: any[]`, `actions: TableAction[]`, `pageSize`. Output: `actionClick` `{ action, row }`.
@@ -63,4 +70,4 @@ Add a new module: `node scripts/add-remote.mjs <folder-name> <key> <port> "<Tile
 ## Commands
 - `npm run dev:<key>` (shell + one module, open localhost:4200/<key>) / `npm run start:all` / `npm run start:<key>`
 - `npm run build:all` / `npm run build:shell` / `npm run build:<key>`
-- `npx ng test shared-services`
+- `npx ng test <project> --watch=false` / `npm run test:all` (every project, one after another)

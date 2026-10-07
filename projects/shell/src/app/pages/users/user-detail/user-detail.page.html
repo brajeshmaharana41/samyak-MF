@@ -1,0 +1,13 @@
+<div class="page">
+  <samyak-page-header [title]="user()?.name ?? 'User not found'" subtitle="User details" backLink="/users" />
+  @if (user(); as u) {
+    <dl class="card">
+      <dt>ID</dt><dd>{{ u.id }}</dd>
+      <dt>Role</dt><dd>{{ u.role }}</dd>
+      <dt>Department</dt><dd>{{ u.department }}</dd>
+      <dt>Status</dt><dd><samyak-status-badge [status]="u.status" /></dd>
+    </dl>
+  } @else {
+    <p>No user with id "{{ id() }}".</p>
+  }
+</div>

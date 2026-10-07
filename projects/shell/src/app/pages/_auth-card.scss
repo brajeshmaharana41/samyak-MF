@@ -1,4 +1,4 @@
-// Shared styles for the login and OTP cards.
+// Shared styles for the login and OTP cards (a Sass partial, pulled in with @use).
 .auth-wrapper {
   min-height: 100vh;
   display: grid;

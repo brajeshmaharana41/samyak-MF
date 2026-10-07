@@ -1,0 +1,9 @@
+<p class="message">{{ data.message }}</p>
+<div class="buttons">
+  <p-button [label]="data.cancelLabel ?? 'Cancel'" severity="secondary" [text]="true" (onClick)="close(false)" />
+  <p-button
+    [label]="data.confirmLabel ?? 'Confirm'"
+    [severity]="data.danger ? 'danger' : 'primary'"
+    (onClick)="close(true)"
+  />
+</div>

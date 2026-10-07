@@ -12,5 +12,6 @@ import { LoaderComponent } from '@samyak/shared-ui';
   selector: 'app-root',
   imports: [RouterOutlet, ToastModule, LoaderComponent],
   templateUrl: './app.html',
+  styleUrl: './app.scss',
 })
 export class App {}

@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
+  <p class="info">{{ complaint.ticketNo }} &middot; {{ complaint.category }}</p>
+
+  <label for="officer">Assign to</label>
+  <p-select inputId="officer" formControlName="assignedTo" [options]="officers" placeholder="Choose an officer" appendTo="body" />
+
+  <label for="priority">Priority</label>
+  <p-select inputId="priority" formControlName="priority" [options]="priorities" appendTo="body" />
+
+  <div class="buttons">
+    <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
+    <p-button type="submit" label="Assign" icon="pi pi-user-plus" [disabled]="form.invalid" />
+  </div>
+</form>

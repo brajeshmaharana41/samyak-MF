@@ -1,0 +1,21 @@
+<header class="page-header">
+  <div class="left">
+    @if (backLink()) {
+      <p-button
+        icon="pi pi-arrow-left"
+        [rounded]="true"
+        [text]="true"
+        severity="secondary"
+        [routerLink]="backLink()"
+        [ariaLabel]="backLabel()"
+      />
+    }
+    <div>
+      <h1>{{ title() }}</h1>
+      @if (subtitle()) {
+        <p>{{ subtitle() }}</p>
+      }
+    </div>
+  </div>
+  <div class="right"><ng-content /></div>
+</header>

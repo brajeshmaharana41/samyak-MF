@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
+  <p class="info">{{ recoveryCase.caseId }} &middot; outstanding {{ recoveryCase.outstanding | currencyInr }}</p>
+
+  <label for="amount">Amount received (INR)</label>
+  <p-inputnumber inputId="amount" formControlName="amount" mode="currency" currency="INR" locale="en-IN" [min]="1" [max]="recoveryCase.outstanding" />
+
+  <label for="receivedOn">Received on</label>
+  <p-datepicker inputId="receivedOn" formControlName="receivedOn" dateFormat="dd M yy" appendTo="body" />
+
+  <div class="buttons">
+    <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
+    <p-button type="submit" label="Record payment" icon="pi pi-check" [disabled]="form.invalid" />
+  </div>
+</form>

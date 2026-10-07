@@ -1,0 +1,2 @@
+<samyak-page-header [title]="info.listTitle" subtitle="Risk scores, grades and premium rates (FY 2026-27)" />
+<samyak-data-table [columns]="columns" [data]="store.all()" [actions]="actions" (actionClick)="onAction($event)" />

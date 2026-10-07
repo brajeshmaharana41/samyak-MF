@@ -11,7 +11,7 @@ import {
   openConfirmDialog,
 } from '@samyak/shared-ui';
 import { USERS, User } from './user.model';
-import { UserEditDialogComponent } from './user-edit-dialog.component';
+import { UserEditDialogComponent } from './user-edit-dialog/user-edit-dialog.component';
 
 /**
  * Users page (owned by the shell). Uses the SAME shared table as every module,
@@ -22,13 +22,8 @@ import { UserEditDialogComponent } from './user-edit-dialog.component';
   imports: [PageHeaderComponent, DataTableComponent],
   // DialogService is provided per page so its dialogs attach to this page.
   providers: [DialogService],
-  template: `
-    <div class="page">
-      <samyak-page-header title="Users" subtitle="Shell-owned page using the shared table" backLink="/home" />
-      <samyak-data-table [columns]="columns" [data]="users()" [actions]="actions" (actionClick)="onAction($event)" />
-    </div>
-  `,
-  styles: `.page { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }`,
+  templateUrl: './users.page.html',
+  styleUrl: './users.page.scss',
 })
 export class UsersPage {
   private readonly dialogs = inject(DialogService);

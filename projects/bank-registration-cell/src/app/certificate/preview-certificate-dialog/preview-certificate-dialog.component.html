@@ -1,0 +1,14 @@
+@if (loading()) {
+  <div class="center"><p-progress-spinner strokeWidth="4" ariaLabel="Loading PDF" /></div>
+}
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+<div class="viewer" [hidden]="loading() || !!error()">
+  <canvas #canvas></canvas>
+</div>
+<div class="buttons">
+  <span class="info">Rendered with PDF.js ({{ pages() }} page) · loaded only by BRC</span>
+  <p-button label="Download" icon="pi pi-download" severity="secondary" [outlined]="true" (onClick)="download()" [disabled]="loading()" />
+  <p-button label="Close" (onClick)="ref.close()" />
+</div>

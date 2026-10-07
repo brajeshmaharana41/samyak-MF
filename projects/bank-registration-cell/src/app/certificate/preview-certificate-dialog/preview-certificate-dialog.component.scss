@@ -1,0 +1,35 @@
+.center {
+  display: grid;
+  place-items: center;
+  height: 24rem;
+}
+.viewer {
+  max-height: 65vh;
+  overflow: auto;
+  background: #e5e7eb;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+canvas {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.info {
+  margin-right: auto;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+.error {
+  color: #dc2626;
+}

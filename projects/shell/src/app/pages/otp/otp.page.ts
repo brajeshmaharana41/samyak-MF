@@ -11,7 +11,7 @@ import { AuthService, DEMO_CREDENTIALS, LoaderService, ToasterService } from '@s
   selector: 'app-otp-page',
   imports: [FormsModule, ButtonModule, InputOtpModule, MessageModule],
   templateUrl: './otp.page.html',
-  styleUrl: '../auth-card.scss',
+  styleUrl: './otp.page.scss',
 })
 export class OtpPage {
   private readonly auth = inject(AuthService);

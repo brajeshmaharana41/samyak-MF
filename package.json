@@ -26,6 +26,7 @@
     "build:rmc": "ng build recovery-management-cell",
     "build:rbp": "ng build risk-based-premium",
     "test": "ng test shared-services --watch=false",
+    "test:all": "ng test shared-services --watch=false && ng test shared-ui --watch=false && ng test shell --watch=false && ng test bank-registration-cell --watch=false && ng test insurance-operation-department --watch=false && ng test claim-settlement-department --watch=false && ng test complaint-redressal-cell --watch=false && ng test recovery-management-cell --watch=false && ng test risk-based-premium --watch=false",
     "add-remote": "node scripts/add-remote.mjs",
     "use-manifest": "node scripts/use-manifest.mjs",
     "ng": "ng"

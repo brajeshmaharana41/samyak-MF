@@ -16,7 +16,8 @@ const SEVERITY_RULES: Array<[RegExp, Severity]> = [
 @Component({
   selector: 'samyak-status-badge',
   imports: [TagModule, StatusLabelPipe],
-  template: `<p-tag [value]="status() | statusLabel" [severity]="severity()" [rounded]="true" />`,
+  templateUrl: './status-badge.component.html',
+  styleUrl: './status-badge.component.scss',
 })
 export class StatusBadgeComponent {
   readonly status = input.required<string>();

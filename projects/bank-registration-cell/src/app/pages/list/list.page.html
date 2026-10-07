@@ -1,0 +1,2 @@
+<samyak-page-header [title]="info.listTitle" subtitle="Bank registration applications" />
+<samyak-data-table [columns]="columns" [data]="store.all()" [actions]="actions" (actionClick)="onAction($event)" />

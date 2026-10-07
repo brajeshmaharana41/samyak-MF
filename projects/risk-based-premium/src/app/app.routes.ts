@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { ModuleLayoutComponent } from './layout/module-layout.component';
+import { ModuleLayoutComponent } from './layout/module-layout/module-layout.component';
 
 /**
  * EXPOSED to the shell as './routes' (see federation.config.js).
@@ -16,12 +16,12 @@ export const routes: Routes = [
     path: '',
     component: ModuleLayoutComponent,
     children: [
-      { path: '', loadComponent: () => import('./pages/dashboard.page').then((m) => m.DashboardPage) },
+      { path: '', loadComponent: () => import('./pages/dashboard/dashboard.page').then((m) => m.DashboardPage) },
       {
         path: 'records',
         children: [
-          { path: '', loadComponent: () => import('./pages/list.page').then((m) => m.ListPage) },
-          { path: ':id', loadComponent: () => import('./pages/detail.page').then((m) => m.DetailPage) },
+          { path: '', loadComponent: () => import('./pages/list/list.page').then((m) => m.ListPage) },
+          { path: ':id', loadComponent: () => import('./pages/detail/detail.page').then((m) => m.DetailPage) },
         ],
       },
     ],

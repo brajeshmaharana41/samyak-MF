@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
+  <p class="info">{{ rating.bankName }} &middot; score {{ rating.riskScore }}, current grade {{ rating.grade }}</p>
+
+  <label for="grade">New grade</label>
+  <p-select inputId="grade" formControlName="grade" [options]="grades" appendTo="body" />
+  <small>Premium rate becomes {{ rates[form.controls.grade.value] }} paise per ₹100.</small>
+
+  <label for="reason">Justification</label>
+  <textarea id="reason" pTextarea rows="3" formControlName="reason" placeholder="Required"></textarea>
+
+  <div class="buttons">
+    <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
+    <p-button type="submit" label="Override" icon="pi pi-check" [disabled]="form.invalid" />
+  </div>
+</form>

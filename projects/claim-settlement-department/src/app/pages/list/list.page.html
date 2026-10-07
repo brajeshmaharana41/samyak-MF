@@ -1,0 +1,2 @@
+<samyak-page-header [title]="info.listTitle" subtitle="Depositor claims awaiting settlement" />
+<samyak-data-table [columns]="columns" [data]="store.all()" [actions]="actions" (actionClick)="onAction($event)" />

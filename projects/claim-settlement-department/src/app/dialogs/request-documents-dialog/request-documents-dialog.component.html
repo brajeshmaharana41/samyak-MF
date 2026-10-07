@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="send()" class="dialog-form">
+  <p class="info">{{ claim.claimId }} &middot; {{ claim.depositor }}</p>
+
+  <label for="docs">Documents needed</label>
+  <p-multiselect inputId="docs" formControlName="documents" [options]="documentTypes" placeholder="Select documents" appendTo="body" display="chip" />
+
+  <label for="note">Note to depositor</label>
+  <textarea id="note" pTextarea rows="3" formControlName="note"></textarea>
+
+  <div class="buttons">
+    <p-button label="Cancel" severity="secondary" [text]="true" (onClick)="ref.close()" />
+    <p-button type="submit" label="Send request" icon="pi pi-send" [disabled]="form.invalid" />
+  </div>
+</form>
